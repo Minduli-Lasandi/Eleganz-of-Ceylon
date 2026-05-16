@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3b2dcca868.js" crossorigin="anonymous"></script>
+    <link rel= "stylesheet" href="MyStyles.css">        <!-- Inserting the external style sheet -->
+    <link rel="stylesheet" href="Home-page.css">       <!-- Inserting the  style sheet related to this page -->
+    <title> Home page </title>
+</head> 
+
+
+
+<body >
+    
+    <nav>
+        <img src="../Home-page/logo.png" alt="Logo of My Website" class="logo">  <!-- Inserting the logo to the navigation bar -->
+        <ul>
+            <li><a href="../Home-page/Home%20page.html"><i class="fa-solid fa-house"></i></a></li>   <!-- Creating the navigation bar-->
+            <li><a href="../../Student_1/Shop/Shop.html">Shop</a></li>
+            <li><a href="../../Student_3/quiz/index.html">Quiz</a></li>
+            <li><a href="../Comments-form/Comments.html">Comments</a></li>
+            <li><a href="../../Student_4/sitemap2.html">Site Map</a></li>
+            <li><a href="../../Student_4/ImageGallery.html">Thumbnail Images</a></li>
+            <li><a href="../../Student_3/about/about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="imagecontain">
+        <img id="image" class="image" src="Home-page/elephants2.jpg" alt="image1">
+        <button class="button button-previous" onclick="changeImage(-1)">&#8249;</button>
+        <button class="button button-next" onclick="changeImage(1)">&#8250;</button>
+    </div>
+
+        <script>  
+            var images = [              // Javascrip to change the images in the home page 
+                "Home-page/elephants2.jpg",     // Taking the images into a list
+                "Home-page/waterfall.jpg",
+                "Home-page/food2.jpg",
+                "Home-page/leopard4.jpg",
+                "Home-page/people2.jpg",
+                "Home-page/statue.jpg"
+            ];
+            var imageIndex = 0;
+            var imageElement = document.getElementById("image");    // Get the element by id name
+    
+            function changeImage(direction) {           // Function to change the images 
+            imageIndex = (imageIndex + direction + images.length) % images.length;    // Assigning to change the images 
+            imageElement.src = images[imageIndex];
+            }
+    
+            setInterval(function () {       // Calling the function
+            changeImage(1);}, 5000);        // Setting the time to change the images as 5 seconds
+        </script>
+      
+
+    <div class="welcome">   <!-- Introduction to the page -->
+        <div  class="intro"> 
+            <div class="watermark">
+            <p>  Ayubowan!</p>
+            </div>
+            <p class="explain">  Welcome to  Sri Lanka!<br>  <br>
+        Come on and lets see what this treasure islands has got for you <br> Savour the unique experinces with us </p>
+           <br><br> <hr>
+        </div>    
+                   
+    </div>
+
+    <div class="subtopics">             <!-- The main container that has all four containers-->
+        <div class="adventure">         <!-- Container for the topic adventures-->
+            <div class="img1">      
+                <a href="../../Student_3/adventures/Adventures.html"><img src="Home-page/2flyingravana1.jpg" alt="adventurephoto"></a>
+            </div> 
+                <br><br><br><br><br><br><span style="font-size: 3em; font-family: cursive;">Adventures <br><br></span>
+                <br> <span style="font-size:1.5em;">
+                Here's an island filled with thrills, ventures, and lots of explorations!  </span><br>          
+                 
+        </div>
+                
+            
+        <div class="wildlife">      <!-- Container for the topic wildlife-->
+                <p>
+                <a href="../../Student_4/wildlife.html"><img src="Home-page/Leopard1.jpg" alt="wildlifephoto"></a>
+                    <br><br><br>
+                    <br><br><br><span style="font-size: 3em; font-family: cursive;">Wildlife<br><br></span>
+                    <br> <span style="font-size:1.5em;"> From elephants to lepoard Sri lanka's wildlife is truely breathtaking
+                    </span>
+                </p>
+        </div>
+
+
+        <div class="destinations">      <!-- Container for the topic destinations-->
+            <p>
+            <a href="../Destination-Subtopic/Destinations.html"><img src="Home-page/sigiria.jpg" alt="destinationphoto"></a>
+                <br><br><br>
+                <br><br><br><span style="font-size: 3em; font-family: cursive;">Destinations<br><br></span>
+                <br> <span style="font-size:1.5em;"> A small island yet charming places to visit 
+                 </span>
+            </p>
+        </div>
+
+
+        <div class="cultures">  <!-- Container for the topic cultures-->
+            <p>
+                <a href="../../Student_1/Cultural/cultural.html"><img src="Home-page/1yaka31.jpg" alt="culturephoto"></a>
+                <br><br><br>
+                <br><br><br><span style="font-size: 3em; font-family: cursive;">Cultural Essence<br><br></span>
+                <br> <span style="font-size:1.5em;"> 
+                The wonders of Sri Lanka is a collection variations</span>
+            </p>
+        </div>
+    </div>   
+    <br><br><br> 
+
+    <footer>        <!-- Inserting the footer-->
+        <div class="row">
+            <div class="col">
+                <img src="../Home-page/logo.png" alt="Logo of My Website" class="logo">      <!-- Inserting the logo for the footer-->
+                <p>Eleganz of ceylon was created for all tourists around the world who loves to visit our country.
+                    We've got it all, the places, adventures, wildlife and multiple cultures. Grab your opportunity as fast as you can.
+                </p>
+            </div>
+
+            <div class="col">    <!-- creating a part with our information-->
+                <h3>OFFICE </h3>
+                <p>IIT</p>
+                <p>GP Square, Bambalapitiya,</p>
+                <p>Colombo 05, Sri Lanka.</p>
+                <br>
+                <p class="email-id"><a href="mailto:minduli.20220374@iit.ac.lk">minduli.20220374@iit.ac.lk</a></p>
+                <br><h4>+94 71 787 8960</h4>
+            </div>
+            
+            <div class="col">
+                <h3>LINKS </h3>       <!-- Second part with the links to other pages -->
+                <ul>
+                    <li><a href="../Home-page/Home%20page.html">Home</a></li>
+                    <li><a href="../Comments-form/Comments.html">Comments</a></li>
+                    <li><a href="../../Student_1/Shop/Shop.html">Shop</a></li>
+                    <li><a href="../../Student_3/quiz/index.html">Quiz</a></li>
+                    <li><a href="../../Student_4/sitemap2.html">Site map</a></li>
+                    <li><a href="../../Student_4/ImageGallery.html">Gallery</a></li>
+                    <li><a href="../../Student_3/about/about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>NEWSLETTER </h3>       <!-- Third part with emails social media etc...-->
+                <form class="getmail">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>        <!-- Taking the email of the user-->
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>  <!-- Inserting buttons/ arrows-->
+                </form>
+                <div class="social-icons">
+                    <div class="align-icons">
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-square-facebook"></i>  <!-- The social media icons-->
+                        <i class="fab fa-square-instagram"></i>
+                        <i class="fab fa-square-whatsapp"></i>
+                    </div>
+                    <div class="page-editor">
+                        <a href="../Home-page/Page-editor_Minduli.html">   <i class="fa-regular fa-user"></i></a>  <!-- Link to the page editor -->
+                        <p> <a href="../Home-page/Page-editor_Minduli.html">Minduli Lasandi</a></p>    <!-- Link to the page editor -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Eleganz of Ceylon © 2023 - All Rights Reserved</p>
+    </footer>
+ 
+ </body>
+ </html>

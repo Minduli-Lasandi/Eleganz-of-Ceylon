@@ -1,0 +1,149 @@
+.image{
+    width: 100%; 
+    height: auto;
+    margin:auto;
+    margin-top: 0%;
+    
+}
+
+.button-next {
+   right: 10px;
+}
+.button-previous {
+   left: 10px;
+}
+.button {
+   position:absolute;
+   top: 50%;
+   padding: 10px;
+   font-size: 20px;
+   background-color: hsla(0, 42%, 95%, 0.531);
+   cursor: pointer;
+}    
+
+@keyframes fade-in {
+   0% {
+   opacity: 0;
+}
+100% {
+   opacity: 1; 
+}
+}
+.intro p {
+   animation-name: fade-in;
+   animation-duration: 3s;
+   animation-delay: 0.5s;
+   text-align: center;
+   
+}
+.watermark{
+   text-align: center;
+   font-family:'Courier New', Courier, monospace ;
+   font-size:6em; 
+   font-style: italic;
+   opacity: 0.3;
+   margin-top: 10%;
+   font-weight: bold;
+   font-style: italic;
+   margin-bottom: -55px;
+
+}
+
+.welcome{
+   background-color: rgb(240, 243, 244);;
+   margin-top: 5%;
+}
+.welcome hr{
+   width: 65%;
+}
+.explain{
+   margin-top: 0;
+   font-size: 22px;
+}
+
+.adventure img{
+   float: left;
+   position: relative;
+   margin-bottom: 30%;
+  
+}
+.adventure{
+   text-align: center;
+   flex-grow: 1;
+   background-color:white;
+   padding:50px;
+   margin-left: 30px;
+   margin-right: 170px;
+   margin-top: 15%;
+ 
+}
+
+.wildlife img{
+   float: right;
+   position: relative;
+}
+.wildlife{
+   text-align: center;
+   flex-grow: 1;
+   background-color: white;
+   padding:50px;
+   top:10%;
+   margin-top: 15%;
+   margin-left: 170px;
+   margin-right: 30px;
+ 
+}
+
+.destinations img{
+   float: left;
+   position: relative;
+}
+.destinations{
+   text-align: center;
+   flex-grow: 1;
+   background-color:white;
+   padding:50px;
+   margin-top: 15%;
+   margin-left: 30px;
+   margin-right: 170px;
+   
+}
+
+.cultures img{
+   float: right;
+   position: relative;
+}
+.cultures{
+   text-align: center;
+   flex-grow: 1;
+   background-color: white;
+   padding:50px;
+   top:10%;
+   margin-top: 15%;
+   margin-left: 170px;
+   margin-right: 30px;
+}
+.suptopics img {
+   display: block;
+
+}
+.adventure img:hover{
+   transform: scale(1.1);
+  
+}
+.wildlife img:hover{
+   transform: scale(1.1);
+  
+}
+.destinations img:hover{
+   transform: scale(1.1);
+  
+}
+.cultures img:hover{
+   transform: scale(1.1);
+  
+}
+
+body{
+ background-color: rgb(240, 243, 244);
+}
