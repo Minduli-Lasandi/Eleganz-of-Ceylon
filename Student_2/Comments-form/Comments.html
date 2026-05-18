@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b2dcca868.js" crossorigin="anonymous"></script>
+    <link rel= "stylesheet" href="../Home-page/MyStyles.css">
+    <link rel="stylesheet" href="Comments.css">
+    <title>Comments</title>    
+</head>
+
+
+<body>
+    
+   
+    <nav>
+        <img src="../Home-page/logo.png"  alt="Logo of My Website" class="logo">  <!-- Inserting the navigation bar and the logo to the navigation bar -->
+        <ul>
+            <li><a href="../Home-page/Home%20page.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="../../Student_1/Shop/Shop.html">Shop</a></li>
+            <li><a href="../../Student_3/quiz/index.html">Quiz</a></li>
+            <li><a href="../Comments-form/Comments.html">Comments</a></li>
+            <li><a href="../../Student_4/sitemap2.html">Site Map</a></li>
+            <li><a href="../../Student_4/ImageGallery.html">Thumbnail Images</a></li>
+            <li><a href="../../Student_3/about/about.html">About Us</a></li>
+        </ul>
+    </nav>  
+    
+    
+    <div class="heading">
+        <h1> Comments!</h1>
+    </div>
+   
+    
+<div class="forms" id="commentforms">   <!-- Creating a form to take users comments about our site-->
+<form action="mailto:mindulilasandi@gmail.com" method="post" enctype="text/plain" id="myForm"  > <!-- Setting up to mail the form to my personal mail-->
+    <br>
+       <div style="text-align: center;"> <span style="font-weight: bold;font-size: 30px; font-family:'Ubuntu', sans-serif; color:white;">
+        Drop you ideas here...</span></div>
+       <br><br><br><br>
+        <h1> About us </h1>
+
+       <fieldset>  <!-- Questions regarding our site-->
+             How did you get to know about our site?
+            <label><br><br>
+                <input type="checkbox"  name="q1" value="Search" onchange="showOther()"> Through search     <!-- Calling fucntions-->
+            </label><br>
+            <label>
+                <input type="checkbox" name="q1" value="friend" onchange="showOther()"> Through a friend
+            </label><br>
+            <label>
+                <input type="checkbox" name="q1" value="addvertisements" onchange="showOther()">Through advertisements
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="q1" value="other" onchange="showOther()">Other source     <!-- Calling fucntions-->
+            </label><br><br><br>
+
+            <div id="other">
+                <label> What is your other source of information <br>
+                    <textarea id="otheroption" name="otheroption" rows="4" cols="50"></textarea>
+                    <br><br> </label>
+
+            </div>
+            </fieldset>
+            <br><br>
+
+
+        <fieldset>
+           Did you find the information provided by our site helpful for your search/visit?
+            <label><br><br>
+                <input type="radio" name="q2" value="yes" > Yes
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="No"> No
+            </label><br><br>
+            </fieldset> 
+            <br><br>
+
+        <fieldset>
+
+         What were your expectations before visiting ur site, and did our site meet your expectations? 
+            <br><br><label for="message">Your expectations:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            <br>
+            Did we meet them?<br>
+            <label><br>
+                <input type="radio" name="q3" value="yes"> Yes
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="No"> No
+            </label><br><br> 
+            </fieldset><br><br>
+    
+
+        <fieldset>
+
+             Did you face any challenges or difficulties during your visit?
+                <label><br><br>
+                    <input type="radio" name="q4" value="yes" onchange="showchallenge()"> Yes <!-- Calling fucntions-->
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="No" onchange="hidechallenge()"> No <!-- Calling fucntions-->
+                </label><br><br> 
+
+                <div id="showchallenges">
+                    <label for="message1"> Challenges/Difficulties you faced  </label><br>
+                    <textarea id="message1" name="message1" rows="4" cols="50"></textarea>
+                    <br><br>
+                </div>
+
+        </fieldset> <br><br>
+          
+        <fieldset>
+             What is your idea about our site 
+            <br><br>
+            <label > Idea  </label>
+            <select name="idea" class="idea" >
+                <option  value="op1"> The site was excellent, really helped us out  </option>
+                <option  value="op2" selected > The site was good </option>
+                <option value="op2"> The site was good, But some problmes occured </option>
+                <option value="op3"> There was lots of problems, this needs to improve </option>
+                <option value="op4"> The site was really messed up </option>
+            </select>
+            <br><br><br><br>
+        </fieldset><br><br>
+
+        
+        <h1> Ratings</h1>
+
+        <fieldset>          <!-- Questions regarding our ratings-->
+             Did you interact with our staff? If yes how would you rate our  staff services?
+            <label><br><br>
+                <input type="radio" name="q7.1" value="yes" onchange="showratings()"> Yes       <!-- Calling fucntions-->
+            </label><br>
+            <label>
+                <input type="radio" name="q7.1" value="No" onchange="hideratings()"> No         <!-- Calling fucntions-->
+            </label><br><br>
+            <div id="showratings">
+                Ratings<br><br>
+                <div class="ratings2">
+                    <label>1<br>
+                        <input type="radio" name="q7.2" value="1">
+                    </label>
+                    <label>2<br>
+                        <input type="radio" name="q7.2" value="2">
+                    </label>
+                    <label>3<br>
+                        <input type="radio" name="q7.2" value="3">
+                    </label>
+                    <label>4<br>
+                        <input type="radio" name="q7.2" value="4">
+                    </label>
+                    <label>5<br>
+                        <input type="radio" name="q7.2" value="5">
+                    </label><br><br>
+                </div>
+            </div>
+        </fieldset><br><br>
+
+       
+
+        <fieldset >
+            Overall, how would you rate our site?
+            <br><br>
+            <div class="ratings3">
+                <label>
+                    1<br>
+                    <input type="radio" name="q8" value="1" onchange="showreasons()" required>          <!-- Calling fucntions-->
+                </label>
+                <label>
+                    2<br>
+                    <input type="radio" name="q8" value="2" onchange="showreasons()" required>
+                </label>
+                <label>
+                    3<br>
+                    <input type="radio" name="q8" value="3" onchange="showreasons()" required>
+                </label>
+                <label>
+                    4<br>
+                    <input type="radio" name="q8" value="4" onchange="showreasons()" required>
+                </label>
+                <label>
+                    5<br>
+                    <input type="radio" name="q8" value="5" onchange="showreasons()" required>
+                </label>
+                <label>
+                    6<br>
+                    <input type="radio" name="q8" value="6" onchange="showreasons()" required>
+                </label>
+                <label>
+                    7<br>
+                    <input type="radio" name="q8" value="7" onchange="showreasons()" required>
+                </label>
+                <label>
+                    8<br>
+                    <input type="radio" name="q8" value="8" onchange="showreasons()" required>
+                </label>
+                <label>
+                    9<br>
+                    <input type="radio" name="q8" value="9" onchange="showreasons()" required>
+                </label>
+                <label>
+                    10<br>
+                    <input type="radio" name="q8" value="10" onchange="showreasons()" required>
+                </label>
+            </div>
+            <br><br>
+
+            <div id="reasons">
+                Any reasons for the rating? 
+               <br><br>
+               <textarea id="message2" name="message2" rows="4" cols="50"></textarea>
+               <br><br><br><br>
+           </div>
+
+          </fieldset><br>
+
+          <div id="error-block"> This question is required! </div><br><br>
+
+
+            
+        <fieldset >
+            <div class="q9">
+                Would you recommend our site to others who are willing to travel?
+               <br>
+               <label>
+                 <input type="radio" name="q9" value="yes"  > Yes
+               </label><br>
+               <label>
+                 <input type="radio" name="q9" value="no"> No
+               </label>
+             </div><br>
+             
+        </fieldset><br><br>
+
+        <fieldset >
+            <div class="q10">
+                Any comments?
+               <br>
+               
+            <br><br>
+               <textarea id="message3" name="message2" rows="4" cols="50"></textarea>
+               <br><br><br><br>
+               </div>
+             
+        </fieldset><br><br>
+
+
+       
+        <div class="button-container">
+            <input type="reset" name="reset" value="Clear Form"  onclick="return hide()">  <!-- Calling the functions along with the reset button-->
+            <input type="submit" name="submit" value="Submit" onclick="return validate(),hidecomments()">   <!-- Calling the functions along with the submit button-->
+
+          
+        </div>
+       
+        
+
+
+  
+<script src="comments.js">  </script>  <!-- Inserting the javascript file-->
+</form>
+</div>
+
+<div  id="thank-you">    <!-- Creating the thank you block that displays after the submission-->
+    <img src="../Home-page/tick-mark-icon-.jpg"  alt="tickmark">
+    <h2> Thank you !</h2>
+    <p>Your response have been successfully submitted</p>
+    <button    onclick="okbutton()"> OK</button><br><br><br><br>
+</div>
+<br><br>
+
+<footer id="footer">        <!-- Inserting the footer-->
+    <div class="row">
+        <div class="col">
+            <img src="../Home-page/logo.png" alt="Logo of My Website" class="logo">      <!-- Inserting the logo for the footer-->
+            <p>Eleganz of ceylon was created for all tourists around the world who loves to visit our country.
+                We've got it all, the places, adventures, wildlife and multiple cultures. Grab your opportunity as fast as you can.
+            </p>
+        </div>
+
+        <div class="col">
+            <h3>Office </h3>      <!-- creating a part with our information-->
+            <p>IIT</p>
+            <p>GP Square, Bambalapitiya,</p>
+            <p>Colombo 05, Sri Lanka.</p>
+            <br>
+            <p class="email-id"><a href="mailto:minduli.20220374@iit.ac.lk">minduli.20220374@iit.ac.lk</a></p>
+            <br><h4>+94 71 787 8960</h4>
+        </div>
+        
+        <div class="col">
+            <h3>Links </h3>       <!-- Second part with the links to other pages -->
+            <ul>
+                <li><a href="../Home-page/Home%20page.html">Home</a></li>
+                <li><a href="../Comments-form/Comments.html">Comments</a></li>
+                <li><a href="../../Student_1/Shop/Shop.html">Shop</a></li>
+                <li><a href="home.html">Quiz</a></li>
+                <li><a href="home.html">Site map</a></li>
+                <li><a href="home.html">Gallery</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter  </h3>       <!-- Third part with emails social media etc...-->
+            <form class="getmail">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>            <!-- Taking the email of the user-->
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>      <!-- Inserting buttons/ arrows-->
+            </form>
+            <div class="social-icons">
+                <div class="align-icons">
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-square-facebook"></i>      <!-- The social media icons-->
+                    <i class="fab fa-square-instagram"></i>
+                    <i class="fab fa-square-whatsapp"></i>
+                </div>
+                <div class="page-editor">
+                 <a href="../Home-page/Page-editor_Minduli.html">   <i class="fa-regular fa-user"></i></a>       <!-- Link to the page editor -->
+                    <p> <a href="../Home-page/Page-editor_Minduli.html">Minduli Lasandi</a></p>          <!-- Link to the page editor -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Eleganz of Ceylon © 2023 - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

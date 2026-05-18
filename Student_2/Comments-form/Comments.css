@@ -1,0 +1,171 @@
+.ratings1 label {       /* Changing the ratings and the alignment of them */
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+   
+}
+.ratings2 label {   /* Changing the ratings and the alignment of them */
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+   
+}
+.ratings3 label {     /* Changing the ratings and the alignment of them */
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+   
+}
+
+
+.heading h1{
+    margin: 0; 
+    color: white; 
+    font-weight:1500; 
+    font-family:'Ubuntu', sans-serif;
+    font-size: 70px;  
+    text-align: center;
+}  
+.heading{
+    margin-top: 7%; 
+
+}
+h1{
+    color: white;
+    text-align: center;
+    font-family:'Ubuntu', sans-serif;
+    font-size: 48px;
+}
+.forms{                 /* Adjusting the form */
+    margin-left: 25px;
+
+}
+.forms fieldset{
+    border-radius: 8px;  /* setting the border radius to the forms/field sets */
+}
+.button-container {
+    display: flex;          /*Adjusting the buttons*/
+  
+}
+
+#commentforms{
+    display: block;     /* Creating this to display and hide the whole block during the form submission*/
+}
+
+
+.button-container input[type="submit"] {
+    margin-right: 100px; /* Adjust this value to increase or decrease the space between buttons */
+    font-size: 18px; 
+    background-color:#5072b6;
+    color: white;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5%;
+    padding: 15px;   
+}
+.button-container input[type="reset"]{
+    margin-right: 100px; /* Adjust this value to increase or decrease the space between buttons */
+    font-size: 18px; 
+    background-color:rgba(158, 158, 161, 0.812);
+    color: white;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5%;
+    padding: 15px;
+    border-radius: 7px;
+
+}
+
+.button-container input[type="reset"]:hover,
+.button-container input[type="submit"]:hover {  /* To hoover the buttons*/
+    transform: scale(1.2);              /* lift the buttons up when hoovering*/
+        
+}
+#thank-you{
+    background-color: white;  /* Changnd the appearance of the thank you message block*/
+    width: 400px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    text-align: center;
+    padding: 0,30px,30px;
+    display: none;
+}
+
+#thank-you img{   /* Adjusted the image in the thank you message */
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    
+}
+#thank-you h2{
+    font-size: 38px;
+    font-family:'Ubuntu', sans-serif;
+  
+}
+#thank-you button{  /* The ok button in the thank you message */
+    width: 50%;
+    height:60px;
+    background-color: #6fd639;
+    margin-top: 50px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0,5px,5px rgb(0,0,0,0.2);
+
+}
+
+
+body{
+    background-image:url("Comments/Comments.png"); /* Inserting an image to the background*/
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* keeping the image fixed while the page scrolls down*/
+}
+.forms fieldset{
+    width: 70%;
+    color: black;
+    background-color: white;
+    margin: auto;
+}
+
+#error-block {                   /* Creating a block to display the error*/
+   background-color: red;
+   color: white;
+   padding: 20px;
+   font-weight: bold;
+   width: 70%;
+   margin: auto;
+   display: none;
+   text-align: center;
+}   
+
+#reasons{   /* Other Id's used to display and hide the block when needed*/
+    display: none;
+}
+#showratings{
+    display:none
+}
+#showchallenges{
+    display: none;
+}
+#other{
+    display: none;
+}
+.idea option{
+    font-size: 14px;
+}
+
+.idea{
+    padding: 10px;
+}
+
+#footer{
+    display: block;
+}
