@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            background-color: green;
+            padding-bottom: 70px;
+        }
+        .container form{
+            padding: 20px;
+            width: 700px;
+            background-color: #fff;
+        }
+        .container form .row{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .container form .row .col{
+            flex: 1 1 250px;
+        }
+        .container form .row .col .title{
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .container form .row .col .inputbox{
+            margin: 15px 0;
+        }
+        .container form .row .col .inputbox span{
+            margin-bottom: 5px;
+            display: block;
+        }
+        .container form .row .col .inputbox input{
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: none;
+        }
+        .container form .row .col .inputbox input:focus{
+            border: 1px solid #000;
+        }
+        .container form .row .col .flex{
+            display: flex;
+            gap: 15px;
+        }
+        .container form .row .col .flex .inputbox{
+            margin-top: 5px;
+        }
+        .container form .row .col .inputbox img{
+            height: 25px;
+            margin-top: 5px;
+        }
+        .total-value{
+            margin-top: 10px;
+            text-align: center;
+            font-size: 25px;
+            color: red;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .container form .submit-btn{
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            background-color: #27ae60;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .container form .submit-btn:hover{
+            background-color: #2ecc71;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="Shop.html"> <!-- Return to the shop when proceed payment button clicked -->
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Your Address</h3>
+                    <div class="inputbox">
+                        <span>Full name :</span>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="inputbox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="147, Madapatha Rd" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>City :</span>
+                            <input type="text" placeholder="Piliyandala" required>
+                        </div>
+                        <div class="inputbox">
+                            <span>District :</span>
+                            <input type="text" placeholder="Colombo" required>
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <span>Telephone :</span>
+                        <input type="tel" placeholder="+94 xx xxx xxxx" required>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <h3 class="title">Payment Details</h3>
+                    <div class="inputbox">
+                        <span>Cards accepted :</span>
+                        <img src="images/cards.png" alt="Accepted cards">
+                    </div>
+                    <div class="inputbox">
+                        <span>Name on card :</span>
+                        <input type="text" placeholder="Hirushan Pathirage" required>
+                    </div>
+                    <div class="inputbox">
+                        <span>Credit card number :</span>
+                        <input type="text" placeholder="0000-0000-0000-0000" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>Exp year :</span>
+                            <input type="text" placeholder="2024" required>
+                        </div>
+                        <div class="inputbox">
+                            <span>Exp month :</span>
+                            <input type="text" placeholder="01" required>
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123" required>
+                    </div>
+                </div>
+            </div>
+            <p class="total-value"></p>
+            <input type="submit" value="Proceed to Pay" class="submit-btn">
+        </form>
+    </div>
+
+    <script>
+        function getURLParameter(name) {   //Function to get the total value
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function initialize() {    // Function to initialize the page
+            const totalValue = getURLParameter('total');
+            const totalValueElement = document.querySelector('.total-value');
+            if (totalValue) {
+                totalValueElement.innerText = `Total Value: $${totalValue}`;
+            } else {
+                totalValueElement.innerText = 'Total Value not found in the URL.';
+            }
+        }
+
+        window.onload = initialize;    // Call initialize function when the page is loaded
+    </script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lunasima&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b2dcca868.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../Student_2/Home-page/MyStyles.css">
+    <title>Shop</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lunasima', sans-serif;
+            font-size: 18px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: scroll;
+        }
+        .cart{
+            margin-left: 50%;
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 9px;
+            border-radius: 3px;
+            width: 87px;
+        }
+        .cart .fa-solid{
+            color: black;
+            font-size: 25px;
+        }
+        .cart p{
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 25px;
+            background-color: red;
+            color: white;
+        }
+        .shop-nav {
+            top: 60px;
+            position: fixed; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 100%; 
+            background-color: #c2ede9;
+        }
+        .shop-nav ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .shop-nav li {
+            margin-left: 5px;
+            margin-top: -15px;
+        }
+        .shop-nav li .logo {
+            margin-left: -5%;
+            font-size: 35px;
+            font-weight: bolder;
+            color: rgb(26, 88, 75);
+            background-color: #fff;
+            padding: 7px 35px;
+            border-radius: 3px;
+            text-align: center;
+        }
+        .shop-nav li a {
+            margin-top: -25px;
+            display: block;
+            padding: 10px 25px;
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #144f42;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 3px;
+        }
+        .shop-nav li a.active{
+            background-color: #0f4136;
+            color: white;
+        }
+        .shop-nav li a:hover {
+            background-color: #144f42;
+            color: white;
+        }
+        .container{
+            margin-top: 2%;
+            display: flex;
+            width: 90%;
+            margin-bottom: 20px;
+            margin-right: -10px;
+        }
+        #root {
+            display: flex;
+            flex-direction: column;
+            width: 68%;
+            justify-content: center;
+        }
+        .product-section {
+            margin-top: 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .sidebar {
+            width: 29%;
+            border-radius: 5px;
+            background-color: #eee;
+            margin-top: 17px;
+            margin-bottom: 50px;
+            margin-left: auto; 
+            padding: 10px;
+            text-align: center;
+        }
+        .head {
+            background-color: rgb(32, 183, 168);
+            border-radius: 3px;
+            height: 50px;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            padding-left: 25px; 
+        }
+        .foot{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px;
+            border-top: 1px solid #333;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            padding: 25px;
+            margin-right: 5px;
+            box-shadow: 4px 4px 10px rgb(72, 72, 72);
+        }
+        .box:hover {
+            transform: scale(1.03);
+        }
+        .box:hover .images {
+            transform: scale(1.2);
+        }
+        .img-box{
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .images{
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .bottom{
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+        }
+        h2{
+            font-size: 24px;
+            color: red;
+        }
+        button{
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(32, 183, 168);
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover{
+            background-color: #333;
+            color: #ffdd35;
+            transform: scale(1.05);
+        }
+        .cart-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 1px solid #aaa;
+            border-radius: 3px;
+            margin: 10px 10px;
+        }
+        .row-img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 0.01px solid goldenrod;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .row-img:hover{
+            transform: scale(1.5);
+        }
+        .rowimg{
+            max-width: 57px;
+            max-height: 57px;
+            border-radius: 50%;
+        }
+        .fa-trash:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            color: red;
+            margin-left: -2px;
+        }
+        .overlay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+        .cart-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(32, 183, 168);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .cart-link:hover {
+            background-color: #333;
+            color: #ffdd35;
+            transform: scale(1.01);
+        }
+        .bottom p{
+            font-size: 13px;
+            text-decoration: none;
+            margin-top: 3px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="background-color: rgba(0, 0, 0, 0.886);">
+        <img src="../../Student_2/Home-page/logo.png" alt="Logo" class="logo">  <!-- Inserting the logo to the navigation bar -->
+        <ul>
+            <li><a href="../../Student_2/Home-page/Home page.html"><i class="fa-solid fa-house"></i></a></li>   <!-- Creating the navigation bar-->
+            <li><a href="../Shop/Shop.html">Shop</a></li>
+            <li><a href="../../Student_3/quiz/index.html">Quiz</a></li>
+            <li><a href="../../Student_2/Comments-form/Comments.html">Comments</a></li>
+            <li><a href="../../Student_4/sitemap2.html">Site Map</a></li>
+            <li><a href="../../Student_4/ImageGallery.html">Thumbnail Images</a></li>
+            <li><a href="../../Student_3/about/about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <nav class="shop-nav">  <!-- Create another navigation bar for navigate between the different products section -->
+        <ul>
+            <li><p class="logo">SHOP</p></li>
+            <li> </li>
+            <li><a href="#cart">Arts & Crafts</a></li>
+            <li><a href="#foods">Spices & Tea</a></li>
+            <li><a href="#fashion">Fashion & Clothing</a></li>
+            <li><a href="#cosmetics">Cosmetics & Wellness Products</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay">  <!-- Creat a button to navigate to the cart -->
+        <a href="#cart" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <br><br id="cart"><br><br><br><br>
+    <div class="container">
+        <div id="root">  <!-- Shop -->
+            <div id="artsAndCrafts" class="product-section"></div><br id="foods"><br><hr><br><br><br>
+            <div id="foodsAndBeverages" class="product-section"></div><br id="fashion"><br><hr><br><br><br>
+            <div id="fashionAndClothing" class="product-section"></div><br id="cosmetics"><br><hr><br><br><br>
+            <div id="cosmeticsAndWellness" class="product-section"></div><br><br><br>
+        </div>
+
+        <div class="sidebar">  <!-- Cart -->
+            <div class="head">
+                <p><strong>My Cart :</strong></p>
+                <div class="cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <p id="count">0</p>
+                </div>
+            </div>              
+            <div id="cartItem">Your cart is empty</div>
+            <br>
+            <div class="foot">
+                <h3 style="font-size: 20px; margin-left: 7px; margin-top: 7px;">Total : </h3>
+                <h2 id="total" style="margin-top: 4px; margin-right: 6px;">$ 0.00</h2>
+            </div>
+            <button id="placeOrderBtn" onclick="placeOrder()" style="display: none;">Place Order</button>
+        </div>
+    </div>
+    <br>
+
+    <script src="products.js"></script>  <!-- linking the javascript files -->
+    <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="4; url=../Student_2/Home-page/Home page.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <title>Eleganz of Ceylon</title>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body{
+            background-image: url(images/background_image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .logo{
+            height: 50px;
+            width: 140px;
+            position: absolute;
+            top: 16px;
+            right: 13px;
+        }
+
+        .flag{
+            height: 60px;
+            width: 95px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        h1{
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 170px;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            padding-top: 65px;
+            text-shadow: 0.07px 0.07px #08424a;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        p{
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            text-shadow: 1px 1px #76898c;
+            padding-left: 25%;
+            font-family: 'Caveat', cursive;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .container{
+            width: 100%;
+            height: 1vh;
+            padding-top: 47px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-box{
+            text-align: center;
+            width: 290px;
+            height: 300px;
+            padding: 25px 10px;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(244, 244, 244, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            animation: fadeIn 1.7s ease-out;
+        }
+
+        .profile-box img {
+            width: 150px;
+            border-radius: 50%;
+            background: #c7fff9;
+            padding: 0.6px;
+        }
+
+        .profile-box h2 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .profile-box h3 {
+            font-size: 19px;
+            margin: 10px auto;
+            padding: 7px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <img src="images/logo_wording.png" alt="Logo" class="logo">
+    <img src="images/sl_flag.jpg" alt="SL flag" class="flag">
+    <h1>ELEGANZ OF CEYLON</h1>
+    <p>A place where unforgettable memories await.</p>
+
+    <div class="container">  <!-- Create a container with profile boxes of our team members -->
+        <div class="profile-box">
+            <img src="images/profile_images/hirushan.jpg" alt="Hirushan" class="profile-pic">
+            <h2>Hirushan Pathirage</h2>
+            <h3>Student 1</h3>
+        </div>
+
+        <div class="profile-box">
+            <img src="images/profile_images/minduli.jpg" alt="Minduli" class="profile-pic">
+            <h2>Minduli Lasandi</h2>
+            <h3>Student 2</h3>
+        </div>
+
+        <div class="profile-box">
+            <img src="images/profile_images/tharani.jpg" alt="Tharani" class="profile-pic">
+            <h2>Tharani Udugampola</h2>
+            <h3>Student 3</h3>
+        </div>
+
+        <div class="profile-box">
+            <img src="images/profile_images/manuja.jpg" alt="Manuja" class="profile-pic">
+            <h2>Manuja Kumarasekara</h2>
+            <h3>Student 4</h3>
+        </div>
+    </div>
+</body>
+</html>
