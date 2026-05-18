@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background-color: hsla(0, 0%, 0%, 0.733);
+  display: flex;
+  z-index: 1;
+}
+
+nav .logo{
+  width: 228px;
+  height: 55px;
+  margin-top: 2.5px;
+  margin-left: 10%;
+}
+
+  
+nav ul{
+  width: 90%;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+nav li{
+  font-family: 'poppins', sans-serif;
+  text-decoration: none;
+  width: auto;
+  margin-left: 33px;
+  font-size: 18px;
+  padding: 8px;
+  color: white;
+  position: relative;
+}
+nav li:hover a{
+  color: #ecfc11;
+}
+
+body{
+  margin-top: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    font-family:'Roboto', sans-serif; 
+}
+footer{
+  width: 100%;
+  position: absolute;
+  margin-bottom: 0;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-right-radius: 120px;
+  font-size: 13px;
+  line-height: 20px;
+}
+footer p, footer h4, footer a{
+  font-family: 'Lunasima', sans-serif;
+}
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 25%;
+  padding: 7px;
+}
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+.logo{
+  width: 300px;
+  height: auto;
+  margin-top: -7%;
+  margin-left: -7%;
+  margin-bottom: 30px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 22px;
+}
+.email-id a{
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+.getmail form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+.getmail form .fa-regular{
+  font-size: 18px;
+  margin-right: 10px;
+}
+.getmailform input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+.getmail form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.getmail form .fa-solid{
+  font-size: 16px;
+  color: #ccc;
+}
+.getmail form .fa-solid:hover{
+  transform: scale(1.1);
+  color: #fff;
+}
+.social-icons{
+  width: 100%;
+}
+.align-icons{
+  margin-left: 20%;
+}
+.social-icons .fab{
+  width: 10%;
+  border-radius: 20%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.page-editor{
+  margin-top: 20px;
+  width: 75%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin-left: 12.5%;
+  background-color: #76767676;
+}
+.page-editor p{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 5%;
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+ 
+}
+.page-editor a{
+  text-decoration: none;
+  color: white;
+}
+.page-editor .fa-regular{
+  margin-left: 5%;
+  font-size: 18px;
+}
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+.copyright{
+  text-align: center;
+}
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+@keyframes moving{
+  0%{
+      left: -20px;
+  }
+  100%{
+      left: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  footer{
+      bottom: unset;
+  }
+  .col:nth-child(2), .col:nth-child(3), .col:nth-child(4){
+      margin-top: 25px;
+      flex-basis: 100%;
+  }
+}
+
+/*creating classes for all font sizes*/
+.small {
+  font-size: 14px;
+}
+
+.medium {
+  font-size: 18px;
+}
+
+.large {
+  font-size: 22px;
+}
+
+/* creating classes for all color buttons */
+.default {
+  --primary-color: #f9f9f9;
+  --secondary-color: #ddd;
+  background-color: var(--primary-color);
+}
+
+.black {
+  --primary-color: #000000;
+  --secondary-color: #000000;
+  background-color: var(--primary-color);
+}
+
+.purple {
+  --primary-color: #7b4fe4;
+  --secondary-color: #560d74;
+  background-color: var(--primary-color);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {/* creating classe for side bar which have images */
+  width: 270px;
+  height: 100%;
+  position: fixed;
+  top: 64px;
+  bottom: auto;
+  right: 0; /* Move the sidebar to the right side */
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 0px;
+  background-color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+a:hover {
+  background-color: #3d2e74;
+}
+
+.content {
+  margin-right: 270px; /* Adjust the margin to create space for the wider sidebar */
+  padding: 20px;
+}
+
+/* Style for active menu item (optional) */
+li.active {
+  background-color: #ccc;
+}
+.card_div {/* creating class for thumbnails in sidebar */
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+}
+
+.card_div:hover {
+  transform: scale(1.05);
+  background-color: #3d2e74;
+}
+
+.card_div img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card_div h2,
+.card_div p {
+  margin: 10px 0;
+}
+
+.hide {
+  display: none;
+}
+.color-select-container {
+  margin-top: 64px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.color_selecter_div {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.color_option_div {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 50%; /* Use border-radius to make the button circular */
+  cursor: pointer;
+  margin-right: 0px;
+  text-align: center; /* Horizontally center the content within the button */
+  line-height: 30px; /* Vertically center the content within the button */
+  font-size: 16px; /* Adjust the font size to fit the circular shape */
+  color: black;
+}
+.color-option-div:hover {
+  border: 2px solid #000; /* Customize the border color and size as desired */
+  border-radius: 5px; /* Optional: Add rounded corners to the border */
+}
+.btn-default {
+  background-color: #f9f9f9;
+  border: 1px solid #333;
+}
+
+.btn-black {
+  background-color: #000000;
+}
+
+.btn-purple {
+  background-color: #8615c7;
+}
+/* Font Sizes */
+.small {
+  font-size: 14px;
+}
+
+.medium {
+  font-size: 18px;
+}
+
+.large {
+  font-size: 22px;
+}
+.button-container-fonts {
+  position: fixed;
+  left: 20px;
+  display: flex;
+  margin-top: 35px;
+}
+.font-size-button {
+  padding: 10px 5px;
+  background-color: #3330;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.small{
+  font-size: small !important;
+}
+
+.medium{
+  font-size: medium !important;
+}
+
+.large{
+  font-size: large !important;
+}
+.card {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 1px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.image_container {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding-right: 20px;
+  max-width: 2350px;
+}
+.choosed_img {
+  margin-left: 100px;
+  width: 1080px;
+  height: 720px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description {
+  margin-left: 20px;
+  max-width: 1200px;
+  text-justify: inter-word;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 0;
+    /* overflow: hidden; This will prevent scrolling */
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+
+#myVideo {
+  position: fixed;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.content {
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.description-container {
+  flex: 1; /* The description container takes the remaining space */
+  max-width: 30%; /* Limit the width of the description container */
+  overflow-y: auto; /* Enable vertical scrolling for the description */
+  background-color: rgba(34, 207, 150, 0.7); /* Add a background to make the text more visible */
+  color: #fff;
+  padding: 10px; /* Add some padding to the description container */
+  border-radius: 5px;
+  max-height: 598px;
+}
+
+.image-container {
+  min-width: 70%;
+  max-width: 70%; /* Limit the width of the image container */
+  min-height: 100%;
+  max-height: 598px;
+  padding: 1px;
+}
+.image-container img:first-child {
+  display: block;
+}
+/* Style the image */
+.image-container img {
+  display: none;
+  width: 100%; /* Add this to make all images the same width */
+  min-height: fit-content;
+  max-height: fit-content;
+}
+
+.description-image-container {
+  margin-top: 5px;
+  display: flex; /* Use flexbox to create a row layout */
+  max-width: fit-content;
+  min-height: fit-content;
+}
+#myVideo2 {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  max-width: 100%;
+}
+.btnHome {
+  margin-left: 50px;
+}
