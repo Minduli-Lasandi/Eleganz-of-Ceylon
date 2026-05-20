@@ -1,0 +1,199 @@
+nav{        /* styles for the navigation bar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background-color: hsla(0, 0%, 0%, 0.733);  /* background colour*/
+  display: flex;
+  z-index: 1;  /* used to prevent the over-lapping of other content*/
+}
+
+nav .logo{  /* Adjusting the logo size*/
+  width: 228px;
+  height: 55px;
+  margin-top: 2.5px;
+  margin-left: 10%;
+}
+
+  
+nav ul{    /* lists in navigation bar */
+  width: 90%;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.3%;
+}
+nav li{
+  font-family: 'poppins', sans-serif;
+  text-decoration: none;
+  width: auto;
+  margin-left: 33px;
+  font-size: 18px;
+  padding: 8px;
+  color: white;
+  position: relative;
+}
+nav li:hover a{   /* hoover the elements in the navigation bar*/
+  color: #ecfc11;
+}
+
+
+
+body{     /* designed this to use a common format for all the pages */
+  margin-top: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    font-family:'Roboto', sans-serif; 
+}
+footer{       /* Changing the appearance if the footer*/
+  width: 100%;
+  position: absolute;
+  margin-bottom: 0;
+  background: linear-gradient(to right, #00093c, #2d0b00);  /* belnding the colours of the footer*/
+  color: #fff;               /* text color used is white */
+  padding: 100px 0 30px;
+  border-top-right-radius: 120px;
+  font-size: 13px;
+  line-height: 20px;
+}
+footer p, footer h4, footer a{       /* fonts used */
+  font-family: 'Lunasima', sans-serif;
+  color: white;
+}
+footer p{
+letter-spacing: 0.5px;
+line-height: 1.3;
+word-spacing: 1.4px;
+}
+.row{               /* Adjusting the rows*/
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{   /* spacing between the coloumns*/
+  flex-basis: 25%;
+  padding: 7px;
+}
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+.logo{    /* Adjusting the logo used for the footer*/
+  width: 300px;
+  height: auto;
+  margin-top: -7%;
+  margin-left: -7%;
+  margin-bottom: 30px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 22px;
+  border-bottom: 3px solid #ccc;
+}
+.email-id a{
+  width: fit-content;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+.getmail {   /* Form to get the emial from the user*/
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;  /* Usings borders*/
+  margin-bottom: 15px;
+}
+.getmail .fa-regular{
+  font-size: 18px;
+  margin-right: 10px;
+}
+.getmail input{   /* Adusting the taking input from user*/
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+.getmail button{   /* Setting up the button */
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.getmail .fa-solid{
+  font-size: 16px;
+  color: #ccc;
+}
+.getmail .fa-solid:hover{   /* Using hoover effects*/
+  transform: scale(1.1);
+  color: #fff;
+}
+.social-icons{
+  width: 100%;
+}
+.align-icons{
+  margin-left: 20%;
+}
+.social-icons .fab{   /*  Adjuting the social media icons*/
+  width: 10%;
+  border-radius: 20%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.page-editor{   
+  margin-top: 20px;
+  width: 75%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid #ccc;   /* Creating an border around the name*/
+  margin-left: 12.5%;
+  background-color: #76767676;
+}
+.page-editor p{    
+  font-size: 15px;
+  text-align: center;
+  margin-left: 5%;
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  text-decoration: none; 
+}
+.page-editor a{   /* The name that has the link to the page editor*/
+  color: white;
+  text-decoration: none;
+}
+.page-editor .fa-regular{
+  margin-left: 5%;
+  font-size: 18px;
+}
+hr{     /* Chanding the appearance of the hr line */
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+.copyright{     /* The bottom with the copyright */
+  text-align: center;
+}
